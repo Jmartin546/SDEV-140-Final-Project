@@ -89,7 +89,8 @@ class AddBooks(EasyFrame):
         bookTitle = self.bookTitle.getText()
         if not authorFirstName or not authorLastName or not bookTitle: # Error check to ensure all fields have input, else outputs an error message to let the user know.
             messagebox.showerror("Input Error", "All fields must be filled.")
-
+            return
+        
         # Set the header for the table
         result = "%20s %20s %18s \n" % ("Author Last Name", "Author First Name", "Book Title")
 
